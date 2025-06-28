@@ -5,6 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const testRoutes = require('./routes/testRoutes');
 const userRoutes = require('./routes/userRoutes');
+const postRoutes = require('./routes/postRoutes');
 
 // Configurar las variables de entorno
 dotenv.config();
@@ -30,6 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 // debe usar el archivo de rutas que importamos.
 app.use('/api', testRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/posts', postRoutes);
 
 // Definir el puerto para verificar que la aplicación se está ejecutando
 const PORT = process.env.PORT || 5001;

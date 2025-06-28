@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     // Hacemos una petición a nuestro endpoint de prueba en el backend
-    axios.get('http://localhost:5001/api/test')
+    axios.get('http://localhost:5001/api')
       .then(response => {
         // Cuando la respuesta llega, actualizamos el estado
         setMessage(response.data.message);
